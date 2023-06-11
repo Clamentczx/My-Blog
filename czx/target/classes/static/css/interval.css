@@ -1,0 +1,91 @@
+
+body{
+    background: url("../images/backg.png");
+}
+
+
+/*--------space--------*/
+.space1{
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+.space2{
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+.space3{
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+.space4{
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+.space5{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.space6{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+/*--------text--------*/
+.text-space{
+    letter-spacing: 1px !important;
+}
+.opacity_rate{
+    opacity: 0.8 !important;
+}
+
+/*--------display--------*/
+.oneline{
+    display: inline-block !important;
+}
+.format{
+    max-width: 72em !important;
+    margin: auto !important;
+}
+
+.format-s{
+    max-width: 58em !important;
+    margin: auto !important;
+}
+
+.format-ss{
+    max-width: 30em !important;
+    margin: auto !important;
+}
+
+
+.margin-space{
+    margin-top: 3em !important;
+}
+
+.margin-space1{
+    margin-top: 1em !important;
+}
+
+.top-right{
+    position:absolute;
+    top: 0;
+    right:0;
+}
+
+.shadow{
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+/*--------function--------*/
+
+.pc-hide{
+    display: none !important;
+}
+
+@media screen and (max-width: 768px){
+    .mobile-hide{
+        display: none !important;
+    }
+    .pc-hide{
+        display: block !important;
+    }
+}

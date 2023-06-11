@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head th:replace="fragment :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Content Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/interval.css">
+    <link rel="stylesheet" href="../static/css/typo.css">
+</head>
+<body>
+
+    <!--navigator-->
+    <nav class="ui attached inverted segment space1 shadow">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui blue header item">BLOG</h2>
+                <a href="#" class="xy item mobile-hide"><i class="home icon"></i>Homepage</a>
+                <a href="#" class="xy item mobile-hide"><i class="idea icon"></i>Classification</a>
+                <a href="#" class="xy item mobile-hide"><i class="tags icon"></i>Tag</a>
+                <a href="#" class="xy item mobile-hide"><i class="clone icon"></i>Document</a>
+                <a href="#" class="xy item mobile-hide"><i class="user icon"></i>About Me</a>
+                <div class="right item">
+                    <div class="ui input icon">
+                        <input type="text" placeholder=".....">
+                        <i class="search icon link"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui black button top-right icon pc-hide menu toggle">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--content-->
+    <div class="space5 format-s">
+        <div class="ui container">
+            <div class="ui segment top attached">
+                <div class="ui horizontal link list mini">
+                    <div class="item">
+                        <img src="https://picsum.photos/id/1/800/300" alt="" class="ui avatar image">
+                        <div class="content"><a href="#" class="header">name</a></div>
+                    </div>
+                    <div class="item">
+                        <i class="calendar icon"></i> 2021-3-20
+                    </div>
+                    <div class="item">
+                        <i class="eye icon"></i> 66
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment attached">
+                <img src="https://picsum.photos/id/5/800/300" alt="" class="ui fluid rounded image">
+            </div>
+            <div class="ui segment attached">
+                <div class="ui segment right aligned basic">
+                    <div class="ui blue label">original</div>
+                </div>
+                <h2 class="ui header center aligned">Cabinet Office to move 500 jobs to Glasgow by 2024</h2>
+                <div id="content" class="typo typo-selection">
+                    <p>An internal letter at Michel Gove's department said it would "strengthen its commitment to Scotland".
+                        The jobs include senior roles and ministers would be expected to spend "some time" in Scotland.</p>
+                </div>
+                <div class="space6">
+                    <div class="ui basic teal label ">study</div>
+                </div>
+                <div class="ui center aligned basic segment">
+                    <button id="payV" class="ui orange basic circular button">GJ</button>
+                </div>
+                <div class="ui payX flowing popup transition hidden">
+                    <div class="ui orange basic label">
+                        <div class="ui images" style="font-size: inherit">
+                            <div class="image">
+                                <img src="../../../../../../myblog/static/images/me.jpeg" alt="" class="ui rounded image" style="width: 120px">
+                                <div>wechat</div>
+                            </div>
+                            <div class="image">
+                                <img src="../../../../../../myblog/static/images/me.jpeg" alt="" class="ui rounded image" style="width: 120px">
+                                <div>paypal</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui segment bottom attached">
+                <div class="ui teal segment">
+                    <div class="ui comments">
+                        <h3 class="ui dividing header">Comments</h3>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="https://picsum.photos/id/1/800/300">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">Today at 5:42PM</span>
+                                </div>
+                                <div class="text">
+                                    How artistic!
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="https://picsum.photos/id/1/800/300">
+                            </a>
+                            <div class="content">
+                                <a class="author">Elliot Fu</a>
+                                <div class="metadata">
+                                    <span class="date">Yesterday at 12:30AM</span>
+                                </div>
+                                <div class="text">
+                                    <p>This has been very useful for my research. Thanks as well!</p>
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                            </div>
+                            <div class="comments">
+                                <div class="comment">
+                                    <a class="avatar">
+                                        <img src="https://picsum.photos/id/1/800/300">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author">Jenny Hess</a>
+                                        <div class="metadata">
+                                            <span class="date">Just now</span>
+                                        </div>
+                                        <div class="text">
+                                            Elliot you are always so right :)
+                                        </div>
+                                        <div class="actions">
+                                            <a class="reply">Reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="https://picsum.photos/id/1/800/300">
+                            </a>
+                            <div class="content">
+                                <a class="author">Joe Henderson</a>
+                                <div class="metadata">
+                                    <span class="date">5 days ago</span>
+                                </div>
+                                <div class="text">
+                                    Dude, this is awesome. Thanks so much
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="ui reply form">
+                            <div class="field">
+                                <textarea name="content" placeholder="write your comment..."></textarea>
+                            </div>
+                            <div class="ui blue labeled submit icon button">
+                                <i class="icon edit"></i> Add Reply
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="ui form">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--footer-->
+    <footer class="ui attached inverted segment space2 center aligned">
+        <div class="ui container">
+            <div class="ui inverted divided stackable grid">
+                <div class="two wide column">
+                    <img src="../../../../../../myblog/static/images/me.jpeg" class="ui rounded image centered" width="150px"></div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Latest Blog</h4>
+                    <div class="ui list inverted link">
+                        <a href="#" class="item">my story</a>
+                        <a href="#" class="item">my story</a>
+                        <a href="#" class="item">my story</a>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <h4 class="ui inverted header">Contact</h4>
+                    <div class="ui list inverted link">
+                        <a href="#" class="item">QQ:623845603</a>
+                        <a href="#" class="item">Email1:clamentczx@gmail.com</a>
+                        <a href="#" class="item">Email2:623845603@qq.com</a>
+                    </div>
+                </div>
+                <div class="six wide column">
+                    <h4 class="ui inverted header">Introduction</h4>
+                    <p class="opacity_rate">This is my individual blog used to record and share my learning experience(include music, computer science and game), wish that we can make progress together at here</p>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="text-space opacity_rate">Copyright@2020-2021 clament designed by clament</p>
+    </footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+        $('.menu.toggle').click(function(){
+            $('.xy').toggleClass('mobile-hide');
+        });
+        $('#payV').popup({
+            popup:$('.payX.popup'),
+            on: 'hover',
+            position:'bottom center'
+        });
+    </script>
+</body>
+</html>

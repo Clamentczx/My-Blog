@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/fragment :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Publish Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/interval.css">
+    <link rel="stylesheet" href="../../static/library/markdown/css/editormd.min.css">
+</head>
+<body>
+
+<!--navigator-->
+<nav th:replace="admin/fragment :: menu(1)" class="ui attached inverted segment space1 shadow">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui blue header item">Administration</h2>
+            <a href="#" class="xy item mobile-hide"><i class="home icon"></i>Homepage</a>
+            <a href="#" class="xy item mobile-hide"><i class="idea icon"></i>Classification</a>
+            <a href="#" class="xy item mobile-hide"><i class="tags icon"></i>Tag</a>
+            <div class="right mobile-hide menu">
+                <div class="ui dropdown item">
+                   <div class="text">
+                        <img class="ui avatar image" src="../../static/images/new.jpg">clament
+                   </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui black button top-right icon pc-hide menu toggle">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<div class="ui attached menu">
+    <a href="#" th:href="@{/admin/admin/publish}" class="active item">Modify</a>
+    <a href="#" th:href="@{/admin/admin}" class="item">List</a>
+</div>
+<!--content-->
+<div class="space5 format-s">
+    <div class="ui container">
+        <form action="#" method="post" class="ui segment form ">
+            <div class="field">
+                <div class="left pointing label input">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" value="original">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">original</div>
+                        <div class="menu">
+                            <div class="item" data-id="original">original</div>
+                            <div class="item" data-id="reprint">reprint</div>
+                            <div class="item" data-id="translate">translate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field stackable">
+                <input type="text" name="title" placeholder="title..">
+            </div>
+            <div class="field">
+                <div id="markdown" style="z-index: 1 ! important;">
+                    <textarea placeholder="content.." name="content" style="display: none"></textarea>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <div class="ui left action labeled input">
+                        <label class="ui basic teal compact label">classification</label>
+                        <div class="ui selection dropdown">
+                            <input type="hidden">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">original</div>
+                            <div class="menu">
+                                <div class="item" data-id="1">developer diary</div>
+                                <div class="item" data-id="2">error log</div>
+                                <div class="item" data-id="3">study material</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left action labeled input">
+                        <label class="ui basic teal compact label">tag</label>
+                        <div class="ui multiple selection search dropdown">
+                            <input type="hidden">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">original</div>
+                            <div class="menu">
+                                <div class="item" data-id="1">fingerstyle</div>
+                                <div class="item" data-id="2">python</div>
+                                <div class="item" data-id="3">sports</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--picture-->
+            <div class="field">
+                <div class="ui left labeled input">
+                    <label class="ui teal label">picture</label>
+                    <input type="text" name="indexedpicture" placeholder="picture address...">
+                </div>
+            </div>
+            <div class="inline fields">
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" checked id="recommend" name="recommend" class="recommend">
+                        <label for="recommend">recommend</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="shareinfo" name="shareinfo" class="shareinfo">
+                        <label for="shareinfo">shareinfo</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="appreciation" name="appreciation" class="appreciation">
+                        <label for="appreciation">appreciation</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="comment" name="comment" class="comment">
+                        <label for="comment">comment</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui error message"></div>
+
+            <div class="ui right aligned container">
+                <button type="button" class="ui button" onclick="window.history.go(-1)">back</button>
+                <button class="ui button">save</button>
+                <button class="ui secondary button">submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<!--footer-->
+<footer th:replace="admin/fragment :: footer" class="ui attached inverted segment space2 center aligned">
+    <div class="ui container">
+        <div class="ui inverted divided stackable grid">
+            <div class="two wide column">
+                <img src="../../static/images/me.jpeg" class="ui rounded image centered" width="150px"></div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">Latest Blog</h4>
+                <div class="ui list inverted link">
+                    <a href="#" class="item">my story</a>
+                    <a href="#" class="item">my story</a>
+                    <a href="#" class="item">my story</a>
+                </div>
+            </div>
+            <div class="five wide column">
+                <h4 class="ui inverted header">Contact</h4>
+                <div class="ui list inverted link">
+                    <a href="#" class="item">QQ:623845603</a>
+                    <a href="#" class="item">Email1:clamentczx@gmail.com</a>
+                    <a href="#" class="item">Email2:623845603@qq.com</a>
+                </div>
+            </div>
+            <div class="six wide column">
+                <h4 class="ui inverted header">Introduction</h4>
+                <p class="opacity_rate">This is my individual blog used to record and share my learning experience(include music, computer science and game), wish that we can make progress together at here</p>
+            </div>
+        </div>
+    </div>
+    <div class="ui inverted section divider"></div>
+    <p class="text-space opacity_rate">Copyright@2020-2021 clament designed by clament</p>
+</footer>
+
+
+
+<th:block>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../../static/library/markdown/editormd.min.js"></script>
+</th:block>
+<script>
+
+    var Editor;
+    $(function() {
+        Editor = editormd("markdown", {
+            width   : "100%",
+            height  : 640,
+            syncScrolling : "single",
+            path    : "../../static/library/markdown/lib/"
+        });
+    });
+    $('.menu.toggle').click(function(){
+        $('.xy').toggleClass('mobile-hide');
+    });
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    });
+    $(".ui.form").form({
+       fields:{
+           title:{
+               identifier:'title',
+               rules:[{
+                   type:'empty',
+                   prompt:'write your title'
+               }]
+           }
+       }
+    });
+</script>
+</body>
+</html>
